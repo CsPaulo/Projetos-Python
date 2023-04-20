@@ -41,15 +41,16 @@ def iniciar():
              m=int(m)
              s= int(count)
 
-             if(s>=5):
+             if(s>=60):
                  count = 0
                  m+=1
+                 s = 0
 
-             s=str(0)+str(s)
-             m=str(0)+str(m)
-             h=str(0)+str(h)
+             s = str(s).zfill(2)
+             m = str(m).zfill(2)
+             h = str(h).zfill(2)
 
-             d=str(h[-2:])+":"+str(m[-2:])+":"+str(s[-2:])
+             d = h + ":" + m + ":" + s
              label_time['text'] = d
              tempo = d
 
